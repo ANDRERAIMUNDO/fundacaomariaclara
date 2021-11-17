@@ -1,0 +1,67 @@
+<div class="card1" tabindex="0">
+<form class="card-container" [formGroup]="registroForm" (ngSubmit)="onSubmit()"> 
+    <span><h3 for="name">Nome</h3>
+        <input id="name" formControlName="name" type="text" class="input-mode" required>
+    </span>
+
+    <span><h3>Sobrenome</h3>
+        <input id="lastname" formControlName="lastname" type="text" class="input-mode" required>
+    </span>
+
+    <span><h3>Email</h3>
+      <input id="email" formControlName="email" type="text" class="input-mode" required>
+    </span>
+
+    <span><h3>Senha</h3>
+        <input id="password" formControlName="password" type="password" class="input-mode" required>
+    </span>
+
+    <span><h3>Confirma Senha</h3>
+        <input type="password" class="input-mode" required> 
+    </span>
+
+    <span><h3>Celular</h3>
+        <input id="phone" formControlName="phone" type="text" class="input-mode" placeholder="somente número" required>
+    </span>
+
+    <span><h3>Número documento RG</h3>
+        <input id="rg" formControlName="rg" type="text" class="input-mode" required>
+    </span>
+
+    <span><h3>Número CPF</h3>
+        <input id="cpf" formControlName="cpf" type="text" class="input-mode" required>
+    </span>
+
+    <span><h3>Cep</h3>
+        <input id="cep" formControlName="cep" type="text" class="input-mode" placeholder="somente números" required>
+    </span>
+
+    <span><h3>Endereço</h3>
+        <input id="endereco" formControlName="logradouro" type="text" class="input-mode" required> 
+    </span>
+    
+    <span><h3>Número</h3>
+        <input id="numero" formControlName="numero" type="text" class="input-mode" required>
+    </span>
+
+    <span><h3>Complemento</h3>
+        <input id="complemento" formControlName="complemento" type="text" class="input-mode" required>
+    </span>
+
+    <span><h3>Bairro</h3>
+        <input id="bairro" formControlName="bairro" type="text" class="input-mode" required>
+    </span>
+
+    <span><h3>Localidade</h3>
+        <input id="localidade" formControlName="localidade" type="text" class="input-mode" required>
+    </span>
+
+    <span><h3>Estado</h3>
+        <input id="uf" formControlName="uf" type="text" class="input-mode" required>
+    </span>
+
+    <button type="submit" [disabled]="!registroForm.valid" class="card2" role="main"><span>Enviar nova senha</span></button>
+</form>
+</div>
+
+<p>Formulario Invalido: {{ registroForm.status }}</p>

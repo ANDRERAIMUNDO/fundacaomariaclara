@@ -1,0 +1,16 @@
+<div class="card1" tabindex="0">
+  <form class="card-container" [formGroup]="registroForm" (ngSubmit)="onSubmit()"> 
+  
+      <span><h3>Email</h3>
+        <input id="email" formControlName="email" type="text" class="input-mode" required>
+      </span>
+
+      <span><h3>Repetir Email</h3>
+        <input id="confirmemail" formControlName="confirmemail" type="text" class="input-mode" required>
+      </span>
+      
+      <button type="submit" [disabled]="!registroForm.valid" class="card2" role="main"><span>Finalizar cadastro</span></button>
+  </form>
+  </div>
+  
+  <p>Formulario Invalido: {{ registroForm.status }}</p>

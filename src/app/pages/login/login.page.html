@@ -1,0 +1,30 @@
+  <div class="card-container">
+    <form>
+    <div class="card1" tabindex="0">
+      <span><h3>Digite seu email</h3>
+        <input type="text" class="input-mode" id="email" required [(ngModel)]="credenciais.email" name="email"> 
+      </span>
+    </div>
+    <div class="card1" tabindex="0">
+      <span><h3>Password</h3>
+        <input type="password" class="input-mode" id="password" required [(ngModel)]="credenciais.password" name="password">
+      </span>
+    </div>
+  </form>
+  <div class="card-container" role="main">
+    <div>
+     <button class="card1" (click)="login()"><a target="_blank" rel="noopener" ><span>Entrar</span></a></button>
+   </div>
+  </div>
+
+  <div>
+    <h3> <a [routerLink]="['/forgot']">Recupera sua senha?</a></h3>
+  </div>
+
+  <div class="card-container" role="main">
+    <div>
+     <button class="card1" [routerLink]="['/singup']"><a target="_blank" rel="noopener" ><span>Criar nova conta</span></a></button>
+   </div>
+  </div>
+
+  
